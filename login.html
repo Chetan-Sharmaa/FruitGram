@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Log In</title>
+<style>
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url("bgiLOG.jpg");
+  background-repeat: no-repeat;
+  }
+  .logInDetails{
+    background-color: rgb(15,15,15);
+    width: 350px;
+    height: 450px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    color: #bc13fe;
+    padding: 2em;
+  }
+  .loginText{
+    font-size: 2em;
+    margin-bottom: 0.5em;
+    text-align: center;
+  }
+  .logInbtn{
+    width: 100px;
+    box-shadow: 2px 2px #bc13fe;
+    border-radius: 2px 5px;
+    height: 30px;
+  }
+  .creatNew{
+    font-size: 0.8em;
+    margin-top: 0.8em;
+    text-align: center;
+    color: rgba(255,255,255,0.911);
+    
+  }
+  .creatNew a{
+    color: #bc13fe;
+  }
+  input{
+    box-shadow: 1px 1px #bc13fe;
+    height: 20px;
+  }
+</style>
+</head>
+<body>
+  <div class="logInDetails">
+    <h2 class="loginText">Log-In</h2>
+    <input type="text" id="logInUsername" placeholder="username"><p id="incorrectuser" style="color:red;font-size:12px"></p><br>
+
+    <input type="password" id="password" placeholder="password"><p id="incorrectPassword" style="color:red;font-size:12px"></p><br>
+
+    <button type="button" class="logInbtn" onclick="logSubBtn()">Log In</button>
+    <p class="creatNew">Don't have an account? <a href="./signUp.html" target="_blank">Sign Up</a></p>
+  </div>
+<script src="./LogAndSign.js"></script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sign Up</title>
+  <style>
+    *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /* background-image: url("bgiSign.jpeg");
+  background-repeat: no-repeat; */
+    background-color: #CCCCCC ;
+  }
+  .signUpDetails{
+    background-color: rgb(15,15,15);
+    width: 350px;
+    height: 450px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    color: #FF6600;
+    padding: 2em;
+    box-shadow: 2px 2px #FF6600;
+  }
+  .signinText{
+    font-size: 2em;
+    margin-bottom: 0.5em;
+    text-align: center;
+  }
+
+  .already{
+    font-size: 0.8em;
+    margin-top: 1em;
+    text-align: center;
+    /* color: rgba(255,255,255,0.623); */
+    color: #FF6600;
+  }
+  .already a{
+    color: rgba(255,255,255,0.623);
+    /* color: #FF6600; */
+  }
+  .signbtn{
+    width: 100px;
+    box-shadow: 2px 2px #FF6600;
+    border-radius: 2px 5px;
+    height: 30px;
+  }
+  input{
+    box-shadow: 1px 1px #FF6600;
+    height: 20px;
+  }
+  </style>
+</head>
+<body>
+  <div class="signUpDetails">
+    <h2 class="signinText">Sign-Up</h2>
+    <input type="text" id="signUsername" onkeypress="return (event.charCode > 64 && event.charCode < 91) || (event.charCode > 96 && event.charCode < 123) || (event.charCode==32)" placeholder="username"><p id="validName" style="color:red;font-size:12px"></p><br>
+
+    <input type="email" id="signEmail" placeholder="E-mail"><p id="validEmail" style="color:red;font-size:12px"></p><p id="validEmail"></p><br>
+
+    <input type="password" id="signPassword" placeholder="password"><p id="validPassword" style="color:red;font-size:12px"></p><br>
+
+    <input type="tel" id="phone" name="phone" placeholder="9876543210"><p id="validPhone" style="color:red;font-size:12px"></p><br>
+    
+    <button type="button" class="signbtn" id="signbtn"onclick="signSubBtn()">Sign Up</button>
+    <p class="already" id="already">Already have an account? <a href="./login.html" target="_blank">Log In</a></p>
+  </div>
+  <script src="./LogAndSign.js"></script>
+</body>
+</html>

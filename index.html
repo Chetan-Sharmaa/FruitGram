@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>FruitGram</title>
+  <style>
+    *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+    .Header{
+      display: flex;
+      justify-content: space-between;
+      background-color: #e28743;
+      height: 50px;
+    }
+    .Header h3{
+      margin-left: -5%;
+      margin-top: 15px;
+    }
+    .Header p{
+      margin-top: 16px;
+      color: blanchedalmond;
+    }
+    .Header button{
+      margin-right: 15px  ;
+      width: 80px;
+      height: 20px;
+      border-radius: 2px 8px;
+      border-width: 0px;
+      box-shadow: 2px 2px #eeeee4;
+      margin-top: 15px;
+    }
+
+    .inputBar{
+      background-color: #eab676;
+      height: 30px;
+      padding-top: 7px;
+      padding-left: 32%;
+    }
+    .inputBar button{
+      /* background-color: #e28743; */
+      border-radius: 1px 6px;
+      width: 25px;
+      margin-left: 3px;
+      border-width: 0px;
+    }
+    .inputBar input{
+      border-width: 0px;
+      border-radius: 1px 6px;
+    }
+    
+    table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+#acc{
+  color: #dddddd;
+  font-size: larger;
+}
+
+  </style>
+</head>
+<body>
+  <div class="fruitList">
+    <div class="Header"><p id="acc"><b>username</b></p><h3><em>Fruitgram</em></h3>
+      <a href="./login.html"><button type="button"  class="logOutbtn">Log Out</button></a></div>
+
+    <div class="inputBar">
+      <label for="fruit">Fruit: </label><input type="text" id="ipFruits" onkeypress="return (event.charCode > 64 && event.charCode < 91) || (event.charCode > 96 && event.charCode < 123) || (event.charCode==32)" placeholder=" ex: Mango"><button type="button" onclick="addFruits()"><b>+</b></button>
+    </div>
+    <p id="repeat" style="color:red;font-size:12px"></p>
+    <table class="fruitTable" id="fruitTable">
+      <tr>
+        <th>Serial No.</th>
+        <th>Fruits Nmae</th>
+      </tr>
+    </table>
+  </div>
+<script src="LogAndSign.js"></script>
+<script> show_data(); </script>
+</body>
+</html>
